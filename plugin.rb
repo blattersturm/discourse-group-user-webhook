@@ -30,6 +30,7 @@ after_initialize do
       type = :user_added_to_group
       payload = {
         type: type,
+        user_id: user.id,
         username: user.username,
         user_email: user.email,
         group: group.name
@@ -45,6 +46,7 @@ after_initialize do
       type = :user_removed_from_group
       payload = {
         type: type,
+        user_id: user.id,
         username: user.username,
         user_email: user.email,
         group: group.name,
